@@ -5,3 +5,37 @@
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
 </web-app>
+<!--<?xml version="1.0" encoding="UTF-8"?>-->
+<!--<web-app>-->
+ <!--  Add context param -->
+<!--<context-param>-->
+  <!--  <param-name>resteasy.role.based.security</param-name>-->
+  <!--  <param-value>true</param-value>-->
+<!--</context-param>-->
+<!--  Add security constraint -->
+<!--<security-constraint>-->
+    <!--<web-resource-collection>-->
+        <!--<web-resource-name>All resources</web-resource-name>-->
+        <!--<url-pattern>/api/*</url-pattern>-->
+    <!--</web-resource-collection>-->
+    <!--<auth-constraint>-->
+        <!--<role-name>customer</role-name>-->
+        <!--<role-name>runner</role-name>-->
+              <!-- <role-name>owner</role-name>-->
+    <!--</auth-constraint>-->
+<!--</security-constraint>-->
+<!--  Add security role -->
+<!--<security-role>-->
+    <!--<role-name>customer</role-name>-->
+<!--</security-role>-->
+<!--<security-role>-->
+    <!--<role-name>runner</role-name>-->
+<!--</security-role>-->
+<!--<security-role>-->
+    <!--<role-name>owner</role-name>-->
+<!--</security-role>-->
+<!-- Add login config -->
+<!--<login-config>-->
+    <!--<auth-method>BASIC</auth-method>-->
+<!--</login-config>-->
+ <!--</web-app>-->
