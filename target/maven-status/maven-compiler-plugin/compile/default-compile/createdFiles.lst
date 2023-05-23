@@ -1,0 +1,10 @@
+service\restaurantService.class
+App\App.class
+ejbs\Runner.class
+ejbs\User.class
+ejbs\Order.class
+ejbs\Meal.class
+ejbs\Restaurant.class
+Repo\UserRepo.class
+service\mealService.class
+service\userService.class
