@@ -17,7 +17,7 @@ public class Runner{
 	private String name;
 	private String status = "avaliable";
 	private double fees;
-	private int completedTrips = 0;
+	private int NumberOfOrder = 0;
 	
 	@Transient
 	@OneToOne(optional = false,mappedBy="runner")
@@ -64,12 +64,13 @@ public class Runner{
 		this.name = name;
 	}
 
-	public int getCompletedTrips() {
-		return completedTrips;
+
+	public int getNumberOfOrder() {
+		return NumberOfOrder;
 	}
 
-	public void setCompletedTrips(int completedTrips) {
-		this.completedTrips = completedTrips;
+	public void setNumberOfOrder() {
+		NumberOfOrder +=1 ;
 	}
 
 

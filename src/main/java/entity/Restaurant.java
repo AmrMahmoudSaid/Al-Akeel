@@ -20,7 +20,6 @@ public class Restaurant {
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Long id;
 	private String name;
-	private Long ownerId;
 	@Transient
 	private int completedOrders = 0;
 	@Transient
@@ -50,20 +49,12 @@ public class Restaurant {
 		this.name = name;
 	}
 
-	public Long getOwnerId() {
-		return ownerId;
-	}
-
-	public void setOwnerId(Long ownerId) {
-		this.ownerId = ownerId;
-	}
-
 	public List<Meal> getMeals() {
 		return meals;
 	}
 
-	public void setMeals(List<Meal> meals) {
-		this.meals=meals;
+	public void setMeals(Meal meals) {
+		this.meals.add(meals);
 	}
 
 	public List<Order> getOrders() {

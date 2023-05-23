@@ -21,7 +21,7 @@ public class Order {
 	@Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Long id;
-	private double total_amount;
+	private double amount;
 	private String status="preparing";
 	private LocalDateTime date = LocalDateTime.now();
 	@Transient
@@ -83,17 +83,21 @@ public class Order {
 		this.runner = runner;
 	}
 
-	public double getTotal_amount() {
-		return total_amount;
+	public double getamount() {
+		return amount;
 	}
 
 	public void setTotal_amount() {
-		this.total_amount=0;
+		this.amount=0;
 		Iterator<Meal> namesIterator = this.meals.iterator();
 		while(namesIterator.hasNext()) {
 			Meal m = namesIterator.next();
-			this.total_amount+=m.getPrice();
+			this.amount+=m.getPrice();
 		}
+	}
+
+	public void setMealls(Meal find) {
+		this .meals.add(find);
 	}
 	
 }
